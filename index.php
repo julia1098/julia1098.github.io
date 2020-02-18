@@ -1,6 +1,6 @@
 ﻿<?
  //данные для предачи в клоаку
- $post['ip'] = $_SERVER["HTTP_CF_CONNECTING_IP"];
+ $post['ip'] = $_SERVER["REMOTE_ADDR"];
  $post['domain'] = $_SERVER['HTTP_HOST'];
  $post['referer'] = @$_SERVER['HTTP_REFERER'];
  $post['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
