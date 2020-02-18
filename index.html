@@ -1,27 +1,558 @@
-<php
- //данные для предачи в клоаку
- $post['ip'] = $_SERVER["REMOTE_ADDR"];
- $post['domain'] = $_SERVER['HTTP_HOST'];
- $post['referer'] = @$_SERVER['HTTP_REFERER'];
- $post['user_agent'] = $_SERVER['HTTP_USER_AGENT'];
- $post['headers'] = json_encode(apache_request_headers());
+<!DOCTYPE html>
+<html dir="ltr">
+<head><!-- [pre]land_id =  -->
 
-//передаем данные в клоаку, запрос идет по http адресу клоаки соответственно ленлинг может быть расположен где угодно, хоть на другом хостинге
- $curl = curl_init('https://app-olk.site/api/check_ip');
- curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
- curl_setopt($curl, CURLOPT_SSL_VERIFYPEER, false);
- curl_setopt($curl, CURLOPT_TIMEOUT, 60);
- curl_setopt($curl, CURLOPT_POST, true);
- curl_setopt($curl, CURLOPT_POSTFIELDS, $post);
+<script type="text/javascript" src="assets/content/shared/js/jquery-1.12.4.min.js"></script>
 
- //получаем ответ
- $json_reqest = curl_exec($curl);
- curl_close($curl);
- $api_reqest = json_decode($json_reqest);
 
-//в зависимости от ответа клоаки выполняем то или иной скрипт (если нет ответа от клоаки ИЛИ есть белая ссылка в ответе клоаки  ИЛИ клоака определила что нужно показывать белый) - показываем белый, в остальных случаях показываем черный.
- if(!@$api_reqest || @$api_reqest->white_link || @$api_reqest->result == 0){
- 	require_once('wtk.html');
- }else{
- 	require_once('land/blk.html');
- }
+<style>
+    .ac_footer {
+        position: relative;
+        text-align: center;
+        overflow: hidden;
+        padding: 50px 0;
+        color: #A12000;
+    }
+
+    .ac_footer a {
+        color: #A12000;
+    }
+
+    .ac_footer p {
+        text-align: center;
+    }
+
+    img[height="1"], img[width="1"] {
+        display: none !important;
+    }
+
+</style>
+<!--retarget-->
+
+<!--retarget-->
+
+
+
+<script type="text/javascript" src="assets/content/_presets/9_16.min.js"></script>
+
+
+<!-- optimizations -->
+
+
+<!---->
+
+
+
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+<base href="http://odnos.site/land/assets" />
+<title> Ottoman Secret</title>
+<link href="https://fonts.googleapis.com/css@family=Roboto_3A400,500,700&subset=cyrillic" rel="stylesheet"/>
+<link href="assets/content/dkuvnbVAwXrqiC9/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<link href="assets/content/dkuvnbVAwXrqiC9/css/main.css" rel="stylesheet"/>
+<link href="assets/content/dkuvnbVAwXrqiC9/css/media.css" rel="stylesheet"/>
+  <!-- INTH_SNIPPET_TOP -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-158688438-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-158688438-1');
+</script>>
+</head>
+<body><!--retarget-->
+
+<!--retarget-->
+<script type="text/javascript" src="assets/content/_presets/9_16.min.js"></script>
+<header>
+<div class="container">
+<div class="logo"><a href="assets2"><img alt="" src="assets/content/dkuvnbVAwXrqiC9/img/logo.png"/></a></div>
+</div>
+<div class="bg-header">
+<div class="container">
+<div class="burger"><img alt="" src="assets/content/dkuvnbVAwXrqiC9/img/burger-menu.png"/></div>
+<div class="menu-block">
+<ul class="menu">
+<li class="menu__item"><a class="menu__item__link" href="assets2">  STİL</a></li>
+<li class="menu__item"><a class="menu__item__link" href="assets2">  KİŞİLER</a></li>
+<li class="menu__item"><a class="menu__item__link" href="assets2">  HOBİ</a></li>
+<li class="menu__item"><a class="menu__item__link" href="assets2">  Hikâyeler</a></li>
+</ul>
+</div>
+</div>
+</div>
+</header>
+<div class="content-bg">
+<div class="container-fixed">
+<div class="container">
+<div class="flag">
+<div class="flag-content">
+<div class="social">
+<a class="mini-logo" href="assets2"><img alt="" src="assets/content/dkuvnbVAwXrqiC9/img/mini_logo.png"/></a>
+<div class="social__item fb">
+<div class="social__img"><img src="assets/content/dkuvnbVAwXrqiC9/img/facebook_icon.png"/></div>
+<div class="social__text">95</div>
+</div>
+<div class="social__item tw">
+<div class="social__img"><img src="assets/content/dkuvnbVAwXrqiC9/img/twitter_icon.png"/></div>
+<div class="social__text">183</div>
+</div>
+<div class="social__item goofle">
+<div class="social__img"><img src="assets/content/dkuvnbVAwXrqiC9/img/google+_icon.png"/></div>
+<div class="social__text">46</div>
+</div>
+</div>
+<ul class="tags">
+<li class="tags__item">
+<a class="tags__item__href" href="assets2">   porno</a>
+</li>
+<li class="tags__item">
+<a class="tags__item__href" href="assets2">   #aktörler</a>
+</li>
+<li class="tags__item">
+<a class="tags__item__href" href="assets2">  #ottomansecret</a>
+</li>
+<li class="tags__item">
+<a class="tags__item__href" href="assets2">   #olaylar</a>
+</li>
+<li class="tags__item">
+<a class="tags__item__href" href="assets2">   #büyükpenis</a>
+</li>
+<li class="tags__item">
+<a class="tags__item__href" href="assets2">   #cinseliktidar</a>
+</li>
+<li class="tags__item">
+<a class="tags__item__href" href="assets2">   #erkek</a>
+</li>
+<li class="tags__item">
+<a class="tags__item__href" href="assets2">   #mükemmelvücut</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="main-wrap">
+<section class="main-content">
+<div class="main-content__padding">
+<h1 class="h1">   DİKKAT:   <span class="h1__normal">   PORNO ENDÜSTRİSİ CİNSEL İKTİDAR ÜRÜNÜ YÜZÜNDEN "YANDI"</span></h1>
+<div class="header_extra">
+<div class="iconblock">
+<i class="icon-clock"></i>
+<span class="icontext">
+<script>
+                                        dtime_nums(-9, true)
+                              </script>
+</span>
+</div>
+<div class="iconblock">
+<i class="icon-eye"></i>
+<span class="icontext">1456</span>
+</div>
+</div>
+<img alt="" class="img-response visible-mobile" src="assets/content/dkuvnbVAwXrqiC9/img/img_4.jpg"/>
+<p>   Olaylar, "Brothers" isimli ünlü İngiliz porno yapımevinin faaliyete geçmesiyle başladı. Porno yıldızı John S.’nin rol aldığı bir reklam filminde erkeklerin kullandığı öze bir gıda takviyesi olan   <a href="assets2">  Ottoman Secret</a>  görüntüye girince, bütün gözler yapımevine döndü.   <b>  Açıkça, oyuncu kullandıktan sonra ürünü gizlemeyi unutmuştu</b>  ve neticesinde şirketin itibarını yok eden resim internete yüklendi ve kısa sürede meme olarak yayıldı.</p>
+<p>   Ancak şakaya bir yere kadar gülünür. Söz konusu olay ise porno endüstrisinin tamamını saldırıya maruz bırakıyor. Artık, kocaman bir penisin ve 2 saat süren ereksiyonun, her zaman doğanın bir armağanı değil, bir ürünün sonucu olduğu ortaya çıkmış durumda.</p>
+<div class="product-block">
+<div class="product-block__left">
+<a href="assets2"><img alt="" src="assets/content/dkuvnbVAwXrqiC9/img/product.png"/></a>
+</div>
+<div class="product-block__right">
+<img alt="" src="assets/content/dkuvnbVAwXrqiC9/img/img_1.jpg"/>
+</div>
+</div>
+<div class="visible-mobile"><img alt="" src="assets/content/dkuvnbVAwXrqiC9/img/product.png"/></div>
+<p>   Örneğin, John C.'nin kariyer geçmişine bir bakın. Sektörde 39 yılı aşkın süre içinde 700'den fazla yetişkin filminde rol aldı. Bu etkileyici deneyime rağmen, 20 yaşında bir erkeğin cinsel gücüne ve 19 cm uzunluğunda penise sahip! Söylemeye gerek yok, o hala dünya porno endüstrisindeki en popüler aktörlerden biri konumunda.</p>
+<p>   Öyle olsa da, "Brothers" hikâyesi, porno izleyicileri arasında bir arayışın başlangıcına ismini verdi: "Resimdeki hatayı bulun." Okuyucularımıza, bu videoları izlerken benzer tartışmalı görüntülere rastlayıp rastlamadıklarını sorduk. Sonuç olarak, farklı oyuncuların yer aldığı iki düzineden fazla görüntü toplandı. Örneğin,</p>
+<img alt="" class="img-response" src="assets/content/dkuvnbVAwXrqiC9/img/img_2.jpg"/>
+<p>   "multi-şarjlı penis" lakaplı,  10 milyon sterlinlik bir servete sahip olan, İngiliz Rocco D. Rocco sektöre 24 yaşında giriyor. İnanması zor ama şu anda 55 yaşında ve hala yetişkin filmlerinde başrol oynuyor. İnanılmaz dayanıklılığı ve bol boşalması ile ünlü. Ama artık bunu nasıl yaptığını biliyorsunuz!</p>
+<img alt="" class="img-response" src="assets/content/dkuvnbVAwXrqiC9/img/img_3.jpg"/>
+<p>   Ve bu adam 60 yaşında! Sağlam bir mesleki deneyime ve genç gibi bir erkeğin sertleşme gücüne sahip. Ryan J. hakkında ilk söyleyebileceğiniz şey bunlar. Bu oyuncu, 2.000'den fazla porno filmde yer aldı ve bu sayıyı biraz daha artırırsa Guinness Rekorlar Kitabı'na girecek. 22 cm boyundaki penisi, Ryan'ın endüstriye girmesini sağlamış. Artık kendi porno stüdyosunun sahibi, yönetmenlik yapıyor ve hala yetişkinlere yönelik filmlerde rol alıyor. Yani, yaş bu meslekte bir engel değildir! Özellikle gıda katkısı endüstrisinin modern ürünlerini kullanmak mümkün olduğunda...</p>
+<img alt="" class="img-response" src="assets/content/dkuvnbVAwXrqiC9/img/img_5.jpg"/>
+<p>   İngiltere'den Dan M. eski bir rugby oyuncusu. Geçirdiği sakatlıktan sonra, Dan sporu bırakıp hayallerini gerçekleştirmeye karar vermiş. Yani, yüzlerce güzel ve ateşli kadınla yatmak ve bunu yapmak için para almak. Ve başarmış da! Dan M. hem hetero hem de gay porno hayranları tarafından tanınıyor. Oyuncu, biseksüel tercihlerini asla gizlememiş. Ancak, kadınlarla ve erkeklerle (ve bazen aynı anda!) nitelikli seks yapmak için doğada çok az insana verilen olağanüstü cinsel yeteneklere ihtiyacımız var. Yani sonucu görebiliyoruz!   <a href="assets2">  Ottoman Secret</a>   kullanıcılarını birçok kez kurtarmıştır.</p>
+<p>   Gördüğünüz gibi, ürün çok etkileyici ve porno oyuncularının süper güç efsanesini yok ediyor. Biz bunu yaparken, seks endüstrisinin cinsel iktidar ve penis büyütme araçlarına sahip olduğu ortaya çıktı. Tanınmış porno direktörü Bill Kenwid'e bu durum hakkındaki düşüncelerini sorduk.</p>
+<div class="blockquote-block">
+<img alt="" src="assets/content/dkuvnbVAwXrqiC9/img/img_6.jpg"/>
+<div class="hr-img">
+<img alt="" class="rnd" src="assets/content/dkuvnbVAwXrqiC9/img/icon.jpg"/>
+</div>
+<blockquote>
+<p>   Çoğu aktörün özel araçlar kullandığını inkâr etmeyeceğim. Bu profesyonel bir ihtiyaçtır. Evet, çok güvendiğimiz ürünlerin bir listesi mevcut. Ancak çoğu zaman videolarda görünen o ürünü kullanırız. Hızlı bir etkiye sahip: Uzun süren ereksiyon, penis büyüklüğünde gözle görülür artış ve yan etkisi olmaması. Bizim açımızdan işin özü budur. İçinde Maca kökü, jinseng, Kobra yağı ve 42 şifalı ottan oluşan bitkisel kompleks mevcut.</p>
+<cite>   Bill Kenweed, porno yönetmeni</cite>
+</blockquote>
+</div>
+<p>   Yönetmenin bahsettiği ürünün ne olduğunu açıkça vurgulayalım:   <a href="assets2">  Ottoman Secret</a>. Bu gıda takviyesi şu etkilere sahip: Erken boşalmayı önler, cinsel ilişki süresini en az 30 dakikaya çıkarır, kan akışını güçlendirir, sperm sayısını arttırır ve cinsel organın büyümesine yol açar. Şimdi bu ürün kesinlikle piyasada kalmayacaktır. Porno aktörlerin "sihirli değneği" olan sıradan erkekler olduğu artık anlaşıldı. Şimdi milyonlarca erkek, bu mucize gıda takviyesini almak ve evde doğaçlama bir porno stüdyosu kurmak isteyecektir. Yani, okuyucularımızdan biri aynı zamanda bir porno oyuncusu olmak istiyorsa, işte   <a href="assets2">  Ottoman Secret gıda takviyesinin satıldığı mağazanın bağlantısı</a>. Bol şans!</p>
+<div class="product-center">
+<a href="assets2"><img alt="" src="assets/content/dkuvnbVAwXrqiC9/img/product.png"/></a>
+</div>
+<a class="btn" href="assets2">
+<div class="btn__text">   SİPARİŞ</div>
+<div class="btn__img"><img src="assets/content/dkuvnbVAwXrqiC9/img/arrow2.png"/></div>
+</a>
+</div>
+<div class="coment-title">
+                          Yorumlar:  
+              </div>
+<div class="main-content__padding">
+<div class="vk-container">
+<div class="vk-comment">
+<div class="vk-avatar">
+<a href="assets2"><img src="assets/content/dkuvnbVAwXrqiC9/img/ava-1.jpg"/></a>
+</div>
+<span class="vk-comment-name">   Onur:   <span class="date">
+<script type="text/javascript">
+                                            dtime_nums(-7, true)
+                                  </script>
+</span></span>
+<div class="vk-comment-text">   Hayatım boyunca bu adamlar gibi yaşamayı hayal ettim: Güzel kızlarla yatmak!  
+                          </div>
+</div>
+<div class="vk-comment level-2">
+<div class="vk-avatar">
+<a href="assets2"><img src="assets/content/dkuvnbVAwXrqiC9/img/ava-2.jpg"/></a>
+</div>
+<span class="vk-comment-name">   Murat:   <span class="date">
+<script type="text/javascript">
+                                            dtime_nums(-6, true)
+                                  </script>
+</span></span>
+<div class="vk-comment-text">   Beni durduran nedir? Yaşım mı? 29 yaşındayım ve sikim kalktığında 18 santim oluyor. Evet, bu ürün yardımcı olur. Yılda 1-2 kez kullanıyorsanız, hiçbir problem yaşamayacaksınız!  
+                          </div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar">
+<a href="assets2"><img src="assets/content/dkuvnbVAwXrqiC9/img/ava-3.jpg"/></a>
+</div>
+<span class="vk-comment-name">   Salih:   <span class="date">
+<script type="text/javascript">
+                                            dtime_nums(-6, true)
+                                  </script>
+</span></span>
+<div class="vk-comment-text">   Penisim bu ürünü kullanarak çok büyüdü. Fotoğraflara bakın:  
+                          </div>
+<div class="cont-com">
+<img alt="" src="assets/content/dkuvnbVAwXrqiC9/img/com-3.jpg"/>
+</div>
+</div>
+<div class="vk-comment level-2">
+<div class="vk-avatar">
+<a href="assets2"><img src="assets/content/dkuvnbVAwXrqiC9/img/ava-4.jpg"/></a>
+</div>
+<span class="vk-comment-name">   İsmail:   <span class="date">
+<script type="text/javascript">
+                                            dtime_nums(-6, true)
+                                  </script>
+</span></span>
+<div class="vk-comment-text">   Vay be! Bu ürün işe yararsa, aynı anda 2 adet sipariş edeceğim.  
+                          </div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar">
+<a href="assets2"><img src="assets/content/dkuvnbVAwXrqiC9/img/ava-5.jpg"/></a>
+</div>
+<span class="vk-comment-name">   Arif:   <span class="date">
+<script type="text/javascript">
+                                            dtime_nums(-5, true)
+                                  </script>
+</span></span>
+<div class="vk-comment-text">   Ben geçen yıl bu siteden   <a href="assets2">  Ottoman Secret</a>   almıştım. Gerçekten işe yarıyo! Penisim birkaç santim uzadı ve daha sık dikleşiyor.  
+                          </div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar">
+<a href="assets2"><img src="assets/content/dkuvnbVAwXrqiC9/img/ava-6.jpg"/></a>
+</div>
+<span class="vk-comment-name">   Hasan:   <span class="date">
+<script type="text/javascript">
+                                            dtime_nums(-5, true)
+                                  </script>
+</span></span>
+<div class="vk-comment-text">   İlk kez   <a href="assets2">  Ottoman Secret</a>   kullandıktan sonra milli oldum. Eskiden çok utangaçtım ve penisim küçük diye kızlarla yatmaktan korkuyordum. Şimdi her şey yolunda, 17 cm uzunluğunda ve kızlarla sorunum yok!  
+                          </div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar">
+<a href="assets2"><img src="assets/content/dkuvnbVAwXrqiC9/img/ava-8.jpg"/></a>
+</div>
+<span class="vk-comment-name">   Bayram:   <span class="date">
+<script type="text/javascript">
+                                            dtime_nums(-4, true)
+                                  </script>
+</span></span>
+<div class="vk-comment-text">   15 cm'den 22'ye hiç de fena değil, ha?  
+                          </div>
+<div class="cont-com">
+<img alt="" src="assets/content/dkuvnbVAwXrqiC9/img/com-8.jpg"/>
+</div>
+</div>
+<div class="vk-comment level-2">
+<div class="vk-avatar">
+<a href="assets2"><img src="assets/content/dkuvnbVAwXrqiC9/img/ava-9.jpg"/></a>
+</div>
+<span class="vk-comment-name">   Gökhan:   <span class="date">
+<script type="text/javascript">
+                                            dtime_nums(-4, true)
+                                  </script>
+</span></span>
+<div class="vk-comment-text">   Daha fazla büyüttüm: eskiden 14 cm’di şimdi 22 cm. 2 ay boyunca her gün kullandım.  
+                          </div>
+<div class="cont-com">
+<img alt="" src="assets/content/dkuvnbVAwXrqiC9/img/com-14.jpg"/>
+</div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar">
+<a href="assets2"><img src="assets/content/dkuvnbVAwXrqiC9/img/ava-10.jpg"/></a>
+</div>
+<span class="vk-comment-name">   Serkan:   <span class="date">
+<script type="text/javascript">
+                                            dtime_nums(-4, true)
+                                  </script>
+</span></span>
+<div class="vk-comment-text">   sipariş verdim parsel gelsin diye bekliyom umarım bana yardımı olur  
+                          </div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar">
+<a href="assets2"><img src="assets/content/dkuvnbVAwXrqiC9/img/ava-11.jpg"/></a>
+</div>
+<span class="vk-comment-name">   Uğur:   <span class="date">
+<script type="text/javascript">
+                                            dtime_nums(-3, true)
+                                  </script>
+</span></span>
+<div class="vk-comment-text">   Yaklaşık altı ay önce   <a href="assets2">  Ottoman Secret</a>   kullanmaya başladım. Talimatları aynen yaptım. Bu gıda takviyesini günde 2 kez yemeklerden sonra bir çay kaşığı aldım. Bir hafta içinde gücüm çok daha iyi oldu. Ve normalden daha sık dik olmak istedi. Boyut konusunda, özel bir şey fark etmedim. Belki de benimki zaten 25 cm'den büyüktü ondandır?  
+                          </div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar">
+<a href="assets2"><img src="assets/content/dkuvnbVAwXrqiC9/img/ava-12.jpg"/></a>
+</div>
+<span class="vk-comment-name">   Cemal:   <span class="date">
+<script type="text/javascript">
+                                            dtime_nums(-3, true)
+                                  </script>
+</span></span>
+<div class="vk-comment-text">   Bu ürünü sadece birkaç gündür kullanıyorum. Ve evet, iyi sonuçlar elde ettim! Her gece karımı istiyorum. Daha önce haftada 2 kez, bazen daha az olurdu.  
+                          </div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar">
+<a href="assets2"><img src="assets/content/dkuvnbVAwXrqiC9/img/ava-13.jpg"/></a>
+</div>
+<span class="vk-comment-name">   Yaşar:   <span class="date">
+<script type="text/javascript">
+                                            dtime_nums(-2, true)
+                                  </script>
+</span></span>
+<div class="vk-comment-text">   Bu ürün ile 2 kur yaptım. bunu kullanarak isterseniz bir porno oyuncusu olabilirsiniz.  
+                          </div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar">
+<a href="assets2"><img src="assets/content/dkuvnbVAwXrqiC9/img/ava-14.jpg"/></a>
+</div>
+<span class="vk-comment-name">   Şükrü:   <span class="date">
+<script type="text/javascript">
+                                            dtime_nums(-2, true)
+                                  </script>
+</span></span>
+<div class="vk-comment-text">  Kesinlikle   <a href="assets2">  işe yarıyor</a>!!! Bu sabah aletim kalkık uyandığımda sevinçten havalara uçtum. Bir yıldan fazla bir zamandır penisim sertleşmiyordu  
+                          </div>
+</div>
+<div class="vk-comment">
+<div class="vk-avatar">
+<a href="assets2"><img src="assets/content/dkuvnbVAwXrqiC9/img/ava-15.jpg"/></a>
+</div>
+<span class="vk-comment-name">   Tarık:   <span class="date">
+<script type="text/javascript">
+                                            dtime_nums(-2, true)
+                                  </script>
+</span></span>
+<div class="vk-comment-text">   Arkadaşlar, benim durumumu fotoğraflarda görebilirsiniz!  
+                          </div>
+<div class="cont-com">
+<img alt="" src="assets/content/dkuvnbVAwXrqiC9/img/com-1.jpg"/>
+</div>
+</div>
+</div>
+<a class="btn" href="assets2">
+<div class="btn__text">   SİPARİŞ</div>
+<div class="btn__img"><img src="assets/content/dkuvnbVAwXrqiC9/img/arrow2.png"/></div>
+</a>
+</div>
+</section>
+<aside class="sidebar">
+<div class="article">
+<div class="article-item">
+<div class="article-item__item">
+<a href="assets2"><img alt="" src="assets/content/dkuvnbVAwXrqiC9/img/article-item-1.jpg"/></a>
+</div>
+<div class="article-item__content">
+<a class="article-item__title" href="assets2">   PANTOLONUNUZ,  KOCA PENİSİNİZİ SAKLAYAMAYACAK</a>
+<div class="article-item__extra">
+<div class="iconblock">
+<div class="comments-o">
+<img alt="" src="assets/content/dkuvnbVAwXrqiC9/img/icon_dialog.png"/>
+</div>
+<span class="icontext">12</span>
+</div>
+<div class="iconblock">
+<i class="icon-clock"></i>
+<span class="icontext">
+<script>
+                                                dtime_nums(-29, true)
+                                      </script>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="article-item">
+<div class="article-item__item">
+<a href="assets2"><img alt="" src="assets/content/dkuvnbVAwXrqiC9/img/article-item-2.jpg"/></a>
+</div>
+<div class="article-item__content">
+<a class="article-item__title" href="assets2">   KIZLAR PENİSİNİZİN BOYUTUNU GÖRÜNCE ÇILDIRACAKLAR</a>
+<div class="article-item__extra">
+<div class="iconblock">
+<div class="comments-o">
+<img alt="" src="assets/content/dkuvnbVAwXrqiC9/img/icon_dialog.png"/>
+</div>
+<span class="icontext">4</span>
+</div>
+<div class="iconblock">
+<i class="icon-clock"></i>
+<span class="icontext">
+<script>
+                                                dtime_nums(-19, true)
+                                      </script>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="article-item">
+<div class="article-item__item">
+<a href="assets2"><img alt="" src="assets/content/dkuvnbVAwXrqiC9/img/article-item-3.jpg"/></a>
+</div>
+<div class="article-item__content">
+<a class="article-item__title" href="assets2">   BU YAZ PLAJDA BÜTÜN DİKKATLER SENİN ÜZERİNDE OLACAK</a>
+<div class="article-item__extra">
+<div class="iconblock">
+<div class="comments-o">
+<img alt="" src="assets/content/dkuvnbVAwXrqiC9/img/icon_dialog.png"/>
+</div>
+<span class="icontext">8</span>
+</div>
+<div class="iconblock">
+<i class="icon-clock"></i>
+<span class="icontext">
+<script>
+                                                dtime_nums(-23, true)
+                                      </script>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div class="article-item">
+<div class="article-item__item">
+<a href="assets2"><img alt="" src="assets/content/dkuvnbVAwXrqiC9/img/article-item-4.jpg"/></a>
+</div>
+<div class="article-item__content">
+<a class="article-item__title" href="assets2">   BU PENİSLE HİÇBİR KIZ HAYAL KIRIKLIĞI YAŞAMAZ</a>
+<div class="article-item__extra">
+<div class="iconblock">
+<i class="icon-comments-o"></i>
+<span class="icontext">12</span>
+</div>
+<div class="iconblock">
+<i class="icon-clock"></i>
+<span class="icontext">
+<script>
+                                                dtime_nums(-11, true)
+                                      </script>
+</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sidebar-product">
+<a href="assets2"><img alt="" class="sidebar-product__img" src="assets/content/dkuvnbVAwXrqiC9/img/product.png"/></a>
+<a class="btn" href="assets2">
+<div class="btn__text">   SİPARİŞ</div>
+<div class="btn__img"><img src="assets/content/dkuvnbVAwXrqiC9/img/arrow2-mini.png"/></div>
+</a>
+</div>
+</aside>
+</div>
+</div>
+</div>
+<div class="copirate">   Telif hakkı   <span class="ryear">2019</span></div>
+<script type="text/javascript" src="assets/content/shared/js/js.cookie.min.js"></script>
+<script>
+    $(document).ready(function () {
+        
+        var AdcomboAdvertTop=$(".ac_advertisement");AdcomboAdvertTop.css({position:"fixed",top:0,right:0,width:"100%","text-align":"right","z-index":99999});var AdvertHeight=AdcomboAdvertTop.height();$(window).scroll(function(){var o=$(window).scrollTop();o>AdvertHeight?AdcomboAdvertTop.hide():AdcomboAdvertTop.show()});
+
+        try {
+            moment.locale("");
+            $('.day-before').text(moment().subtract(1, 'day').format('D.MM.YYYY'));
+            $('.day-after').text(moment().add(1, 'day').format('D.MM.YYYY'));
+        } catch (e) { console.log('moment problems!'); }
+    });
+</script>
+
+<!--retarget-->
+
+<!--retarget-->
+<!-- Global site tag (gtag.js) - Google Ads: 760638800 -->
+<script async src="https://www.googletagmanager.com/gtag/js@id=AW-760638800"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-760638800');
+</script>
+
+
+<script type="text/javascript" src="assets/content/shared/js/history.ielte7.min.js"></script>
+
+
+
+
+<div class="ac_footer">
+
+    <p></p>
+    <script>
+        typeof adc_clearFooter !== 'undefined' && adc_clearFooter();
+    </script>
+</div>
+   <script src="https://snippet.infothroat.com/lead/lead.js" type="text/javascript"></script>
+<script type="text/javascript">
+    drlead.run({
+        params: {
+            token: "NGU0YTFKYMQTNZJLZC00ZJHJLTKWNMUTNWRMYZQ3Y2I4NZM1",
+            stream_code: "rFFdX",
+            thanks_page: "https://yandex.ru"
+        },
+        subs: {
+            sub1: drlead.get("sub1"),
+            sub2: drlead.get("sub2"),
+            sub3: drlead.get("sub3"),
+            sub4: drlead.get("sub4"),
+            sub5: drlead.get("sub5")
+        },
+        callback: function (response) {
+            // On success send
+        }
+    });
+</script>
+</body>
+</html>
