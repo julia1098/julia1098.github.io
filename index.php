@@ -1,4 +1,4 @@
-﻿<php>
+﻿<
  //данные для предачи в клоаку
  $post['ip'] = $_SERVER["REMOTE_ADDR"];
  $post['domain'] = $_SERVER['HTTP_HOST'];
